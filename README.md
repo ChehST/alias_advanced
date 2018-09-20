@@ -1,6 +1,9 @@
+# Alias Advance Deamon
+
+
 This repo about daemon, that checks
 *sh_history and analize it. If it'll
-common comand it advances you, use
+common comand it gives you an advise,to use
 alias that daemon'll create itself.
 
 Reference to pep3143:
