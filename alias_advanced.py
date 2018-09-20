@@ -35,6 +35,10 @@ def search_history_file(sy_SHELL):
     pt.split(sh_history_dir[1])
     history_path = pt.exists(sh_history_dir)
     print(history_path) # debug is var returnd to path compabitiy whith os.path
+    '''here we gonna use pt.curdir debug manupulations'''
+    os.chdir(pt.abspath(sh_history_dir))
+    print("abs path is %s" % pt.abspath(pt.curdir))
+
 
 new_sy_SHELL = check_shell(sy_SHELL)
 search_history_file(new_sy_SHELL);
