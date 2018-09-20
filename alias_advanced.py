@@ -32,8 +32,9 @@ def search_history_file(sy_SHELL):
     # see os.path to parse the history! at this point bar doesn't work        
     sh_history_dir = '%s%s%s' % (ROOT_DIR, HOME_DIR, LOGGED_USER)
     print(sh_history_dir)
-
-
+    pt.split(sh_history_dir[1])
+    history_path = pt.exists(sh_history_dir)
+    print(history_path) # debug is var returnd to path compabitiy whith os.path
 
 new_sy_SHELL = check_shell(sy_SHELL)
 search_history_file(new_sy_SHELL);
