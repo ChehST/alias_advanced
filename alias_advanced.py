@@ -16,6 +16,7 @@ ROOT_USER_DIR = "root"
 HOME_DIR = "home/"
 LOGGED_USER = os.getlogin()
 sy_SHELL = "default=/bin/bash"
+SHELL = ''
 
 
 
@@ -39,12 +40,16 @@ def search_history_file(sy_SHELL):
     print("Curent working path is %s" % pt.abspath(sh_history_dir))
     return sh_history_dir
 
+def get_unar_shell_name(sy_SHELL):
+    pass
 
 def listing_history_file():
     # foo to handle histoy file
     # and  subsequent abalising to give an alias advise
-    history_file = open('.bash_history', 'r')
+    shell_file_name = ".%s" % (sy_SHELL[5:]) + "_history"
+    history_file = open(shell_file_name, 'r')
     print("read comments at your source code!!!")
+    print("history file name = '%s'" % shell_file_name)
     print("history file succesfull opend, start reading!")
     print(history_file.read(1)) #Here we should read&write to copy or list\array per line
 
