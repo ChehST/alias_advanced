@@ -43,8 +43,14 @@ def search_history_file(sy_SHELL):
 def listing_history_file():
     # foo to handle histoy file
     # and  subsequent abalising to give an alias advise
-    pass
+    history_file = open('.bash_history', 'r')
+    print("read comments at your source code!!!")
+    print("history file succesfull opend, start reading!")
+    print(history_file.read(1)) #Here we should read&write to copy or list\array per line
 
 # Block of Debug code, use it in core deamon file.
 sy_SHELL = check_shell(sy_SHELL)
-search_history_file(sy_SHELL);
+search_history_file(sy_SHELL)
+# At this point your in historie's directory
+listing_history_file()
+
