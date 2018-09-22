@@ -40,6 +40,11 @@ def search_history_file(sy_SHELL):
     return sh_history_dir
 
 
-# Block of Debug code
+def listing_history_file():
+    # foo to handle histoy file
+    # and  subsequent abalising to give an alias advise
+    pass
+
+# Block of Debug code, use it in core deamon file.
 sy_SHELL = check_shell(sy_SHELL)
 search_history_file(sy_SHELL);
